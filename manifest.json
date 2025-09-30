@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "X Follower Remover",
+    "version": "1.0",
+    "description": "Remove X followers from a list of usernames",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage"
+    ],
+    "host_permissions": [
+      "https://x.com/*",
+      "https://twitter.com/*"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "favicon_io/icon16.png",
+        "32": "favicon_io/icon32.png",
+        "192": "favicon_io/icon192.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://x.com/*", "https://twitter.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 400px;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    h2 {
+      margin: 0 0 15px 0;
+      font-size: 18px;
+    }
+    textarea {
+      width: 100%;
+      height: 200px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 12px;
+      box-sizing: border-box;
+      resize: vertical;
+    }
+    .controls {
+      margin-top: 15px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    #startBtn {
+      background: #1d9bf0;
+      color: white;
+    }
+    #startBtn:hover {
+      background: #1a8cd8;
+    }
+    #startBtn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    #stopBtn {
+      background: #f4212e;
+      color: white;
+      display: none;
+    }
+    #stopBtn:hover {
+      background: #dc1a26;
+    }
+    .delay-control {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+    }
+    .delay-control input {
+      width: 60px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    #status {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      display: none;
+    }
+    #status.info {
+      background: #e8f5fe;
+      color: #1d9bf0;
+      display: block;
+    }
+    #status.success {
+      background: #e6f4ea;
+      color: #137333;
+      display: block;
+    }
+    #status.error {
+      background: #fce8e6;
+      color: #c5221f;
+      display: block;
+    }
+    .note {
+      margin-top: 10px;
+      padding: 10px;
+      background: #fff3cd;
+      border-radius: 4px;
+      font-size: 12px;
+      color: #856404;
+    }
+  </style>
+</head>
+<body>
+  <h2>X Follower Remover</h2>
+  
+  <label for="usernames">Enter usernames (one per line):</label>
+  <textarea id="usernames" placeholder="username1&#10;username2&#10;username3"></textarea>
+  
+  <div class="controls">
+    <button id="startBtn">Start Removal</button>
+    <button id="stopBtn">Stop</button>
+    <div class="delay-control">
+      <label for="delay">Delay (ms):</label>
+      <input type="number" id="delay" value="2000" min="1000" max="10000">
+    </div>
+  </div>
+  
+  <div id="status"></div>
+  
+  <div class="note">
+    <strong>Note:</strong> Keep this popup open and don't interact with the X tab while the script is running. Higher delays reduce the chance of rate limiting.
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
