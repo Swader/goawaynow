@@ -1,0 +1,11 @@
+{
+  "name": "x-follower-remover",
+  "version": "1.0.0",
+  "description": "Remove X followers from a list of usernames",
+  "scripts": {
+    "pack": "bun run pack.js"
+  },
+  "keywords": ["chrome-extension", "twitter", "x"],
+  "author": "",
+  "license": "MIT"
+}

@@ -17,6 +17,8 @@
       "default_icon": {
         "16": "favicon_io/icon16.png",
         "32": "favicon_io/icon32.png",
+        "64": "favicon_io/icon64.png",
+        "128": "favicon_io/icon128.png",
         "192": "favicon_io/icon192.png"
       }
     },

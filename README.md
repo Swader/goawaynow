@@ -11,12 +11,26 @@ usernames.
 - Graceful error handling
 - Saves your list and settings
 
+## Development
+
+### Building for Chrome Web Store
+
+To create a package for Chrome Web Store submission:
+
+```bash
+bun run pack
+```
+
+This will create `dist/x-follower-remover.zip` ready for upload.
+
 ## Installation
 
 Works with any Chromium browser.
 
-1. Download the source code into a folder. Clicking "Download zip" on Github should
-do the trick.
+### From Source (Development)
+
+1. Download the [source code](https://github.com/Swader/goawaynow) into a
+   folder. Clicking "Download zip" on Github should do the trick.
 
 2. Open Chrome and navigate to `chrome://extensions/`
 
@@ -25,6 +39,10 @@ do the trick.
 4. Click "Load unpacked" and select the folder containing the extension files
 
 5. The extension should now appear in your extensions list
+
+### From Chrome Web Store
+
+(Coming soon)
 
 ## Usage
 
